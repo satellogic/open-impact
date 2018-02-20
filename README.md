@@ -54,7 +54,7 @@ Data:
 
 [Notebook](#)
 
-3- Gambia field 2 market access. Hacer land classification y luego assignarlo a la ciudad mas cercana, calcular la curva de recursos naturales y si distancia por carretera a los centros de las ciudades. Esto usa OSM para el routing. (edited)
+3- Gambia field 2 market access. Do land classification and then calculate travel times to relevant points of interest (cities, markets, ports) using OSRM.
 
 
 ## Ocean color
