@@ -28,11 +28,7 @@ Coordinates:
 
 ![](hyperion_canada_coord.png)
 
-```sh
-
 ![](hyperion_canada.png)
-
-```sh
 
 - Landsat available data:
 
