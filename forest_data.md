@@ -20,8 +20,14 @@ You will use images acquired by the following satellites:
 
 Hyperion's available data:
 
+Serch criteria:
+
 Date: Search from 01/01/2014 to 12/31/2014
 
+Coordinates:
+[![](hyperion_canada_coord.png)]
+
+```sh
 [![](hyperion_canada.png)]
 
 ```sh
