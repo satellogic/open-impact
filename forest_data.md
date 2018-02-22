@@ -28,18 +28,20 @@ Coordinates:
 
 ![](hyperion_canada_coord.png)
 
-
-![](hyperion_canada.png)
 ```sh
 
-   - Landsat available data:
+![](hyperion_canada.png)
 
-    Landsat Collection 1 Level-1:
-    . Landsat 8
-    . Landsat 7
-    . Landsat 4-5
+```sh
 
-    - Satellogic available data = None
+- Landsat available data:
+
+Landsat Collection 1 Level-1:
+. Landsat 8
+. Landsat 7
+. Landsat 4-5
+
+- Satellogic available data = None
 
 
 ## 2017 British Columbia wildfires
