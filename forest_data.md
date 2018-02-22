@@ -30,7 +30,6 @@ Coordinates:
 
 
 [![](hyperion_canada.png)]
-
 ```sh
 
 - Landsat available data:
@@ -48,7 +47,6 @@ Landsat Collection 1 Level-1:
 Wildfire spots:
 
 [![](usa_fire.png)]
-
 ```sh
 
 - Eo-1 Hyperions available data:
@@ -62,7 +60,6 @@ Date: Search from 01/01/2017 to 12/31/2017
 Coordinates:
 
 [![](usa_fire_coords.png)]
-
 ```sh
 
 - Landsat available data:
