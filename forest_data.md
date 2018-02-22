@@ -26,9 +26,7 @@ Date: Search from 01/01/2014 to 12/31/2014
 
 Coordinates:
 
-![](hyperion_canada_coord.png)
-
-![](hyperion_canada.png)
+![](canada_fires_roi.png)
 
 - Landsat available data:
 
