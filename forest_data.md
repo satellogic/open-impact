@@ -26,10 +26,10 @@ Date: Search from 01/01/2014 to 12/31/2014
 
 Coordinates:
 
-[![](hyperion_canada_coord.png)]
+![](hyperion_canada_coord.png)
 
 
-[![](hyperion_canada.png)]
+![](hyperion_canada.png)
 ```sh
 
 - Landsat available data:
