@@ -18,7 +18,7 @@ You will use images acquired by the following satellites:
 
 ## 2014 Northwest Territories fires
 
-Hyperion's available data:
+- Eo-1 Hyperion's available data:
 
 Serch criteria:
 
@@ -32,3 +32,48 @@ Coordinates:
 [![](hyperion_canada.png)]
 
 ```sh
+
+- Landsat available data:
+
+Landsat Collection 1 Level-1:
+. Landsat 8
+. Landsat 7
+. Landsat 4-5
+
+- Satellogic's available data = None
+
+
+## 2017 British Columbia wildfires
+
+Wildfire spots:
+
+[![](usa_fire.png)]
+
+```sh
+
+- Eo-1 Hyperion's available data:
+
+Until 12-MAR-2017 (Fire was on 06-JUL-2017) 
+
+Serch criteria:
+
+Date: Search from 01/01/2017 to 12/31/2017
+
+Coordinates:
+
+[![](usa_fire_coords.png)]
+
+```sh
+
+- Landsat available data:
+
+Landsat Collection 1 Level-1:
+. Landsat 8
+. Landsat 7
+. Landsat 4-5
+
+- Satellogic's available data:
+
+Date: 07-OCT-2017  (Fire was on 06-JUL-2017)
+
+https://telluric.satellogic.com/explorer/shared/030d7e29-ec9c-4dcf-8eb3-95de92ef7ce8/automatic_macro_pipeline-RGB_Enhanced-from_2017-04-23_141756-to_2018-01-25_133929
