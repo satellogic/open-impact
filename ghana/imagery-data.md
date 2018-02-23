@@ -6,11 +6,11 @@ This document explains how to find imagery data for the Gambia challenge.
 
 Download data from https://earthexplorer.usgs.gov/
 
-Search from: 01/01/2018 to 02/22/2018
+Search from: 2017-11-01 to 2018-02-22
 
 Coordinates: Select ROI with the following instructions
 
-![](gambia_image_coordinates.png)
+![](gambia_image_coordinates2.png)
 
 ## Satellogic Data
 
