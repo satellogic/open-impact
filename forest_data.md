@@ -16,27 +16,6 @@ You will use images acquired by the following satellites:
 - Landsat 8: February 11, 2013 	 Still active
 - FM3 Satellogic: April 2017 	 Still active 
 
-## 2014 Northwest Territories fires
-
-- Eo-1 Hyperion available data:
-
-Serch criteria:
-
-Date: Search from 01/01/2014 to 12/31/2014
-
-Coordinates:
-
-![](canada_fires_roi.png)
-
-- Landsat available data:
-
-Landsat Collection 1 Level-1:
-. Landsat 8
-. Landsat 7
-. Landsat 4-5
-
-- Satellogic available data = None
-
 
 ## 2017 British Columbia wildfires
 
@@ -44,27 +23,20 @@ Wildfire spots:
 
 ![](usa_fire.png)
 
-- Eo-1 Hyperions available data:
-
-Until 12-MAR-2017 (Fire was on 06-JUL-2017) 
-
-Serch criteria:
-
-Date: Search from 01/01/2017 to 12/31/2017
-
-Coordinates:
-
-![](usa_fire_coords.png)
+- Eo-1 Hyperions available data = None
 
 - Landsat available data:
 
-Landsat Collection 1 Level-1:
-. Landsat 8
-. Landsat 7
-. Landsat 4-5
+Landsat Collection 1 Level-1: Landsat 8
 
-- Satellogic available data:
+Obtain data from https://earthexplorer.usgs.gov/
 
-Date: 07-OCT-2017  (Fire was on 06-JUL-2017)
+Serch criteria:
 
-https://telluric.satellogic.com/explorer/shared/030d7e29-ec9c-4dcf-8eb3-95de92ef7ce8/automatic_macro_pipeline-RGB_Enhanced-from_2017-04-23_141756-to_2018-01-25_133929
+Date: Search from 01-JUL-2017 to 31-DEC-2017
+
+Coordinates:
+
+![](british_columbia_roi.png)
+
+- Satellogic available data = None
