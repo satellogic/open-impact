@@ -43,9 +43,17 @@ Take data from right before a fire to after it's fully recovered. Use the hypers
 [Notebook](#)
 
 
-## Access to market
+## Access to market / Gambia
 
-One of the most important aspects in development is access to resources, from hospitals, to schools to markets. The idea of this project is to create the accessibility curve for a region highly dependent on this accessibility.
+One of the most important aspects in development is access to/from resources. For example access to  hospitals, to schools, to markets...
+
+The idea of this project is to focus on measuring this accessibility, either by assessing the transportation road conditions (find new, missing roads, or pavement quality) or calculate the distance from the harvested fields to the ports or markets.
+
+For example, in Gambia [1/3 of the GPD](https://en.wikipedia.org/wiki/Economy_of_the_Gambia) is agriculture, and about [75% of the population depends on crops](https://rainforests.mongabay.com/deforestation/archive/Gambia.htm).
+
+We could, for example, calculate first the location of planted areas, and then the travel times between these and the closest villages, or port (for exports). This will give us information of the operating cost and effort to produce the harvest, and could help us calculate the impact when a particular road is upgraded, or degraded.
+
+
 
 Data:
 - Landsat/Copernicus Level-1 at different times.
@@ -53,8 +61,6 @@ Data:
 - Historical Hyperion where available.
 
 [Notebook](#)
-
-3- Gambia field 2 market access. Do land classification and then calculate travel times to relevant points of interest (cities, markets, ports) using OSRM.
 
 
 ## Ocean color
