@@ -2,27 +2,31 @@
 
 This document explain who to run a local server to give, much faster, travel times, in custom types of vehicles, on a custom region.
 
-In this case we focus on a region around the Gambia, and a truck.
+The alternative is to use e.g. [Mapbox API](https://www.mapbox.com/api-documentation/#matrix) or [OSRM API](http://project-osrm.org/docs/v5.10.0/api/#general-options).
+
+For this tutorial, we focus on a region (the Gambia), and a mode of transportation (a truck).
 
 ## Overview
 
 0. Install software
-1. Download and sync OSM data
+1. Download [or update] OSM data
 2. Download and run routing engine OSRM.
 3. Sample routing called
 
-## 0. Install Sfotware.
+## 0. Install Software.
 
 You'll need:
-* osmconvert `wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -O3 -o osmconvert`
-* osmupdate `wget -O - http://m.m.i24.cc/osmupdate.c | cc -x c - -o osmupdate`
-* gdal
-* docker
+* osmconvert:
+ `wget -O - http://m.m.i24.cc/osmconvert.c | cc -x c - -lz -O3 -o osmconvert`
+* osmupdate
+`wget -O - http://m.m.i24.cc/osmupdate.c | cc -x c - -o osmupdate`
+* [Gdal](http://www.gdal.org/)
+* [docker](https://docs.docker.com/install/)
 
 ## 1. Download and sync OSM data
 
 
-Establish a Bounding box around The gambia. Add a generous buffer around it, since sometimes to go to you destination you might take a better road around the region.
+Establish a Bounding box around The Gambia. Add a generous buffer around it, since sometimes to go to you destination you might take a better road around the region.
 
 [![](gambia-roi.png)](https://gist.github.com/brunosan/b10932ecba1b792dc4ade0f4fb41c81b)
 
@@ -51,9 +55,9 @@ Establish a Bounding box around The gambia. Add a generous buffer around it, sin
 
 ## 2. Download and run routing engine OSRM.
 
-Follow instructions on [OSRM](https://github.com/Project-OSRM/osrm-backend)
+First, if you don't want to use default driving properties (e.g. a car), you should also define the ones of the vehicle you will be using for the travel times (top speed, types of roads it can travel, ...). I created a quick `truck.lua` based on the standard `car.lua` and lowering the top speed.
 
-You should also define the driving properties of the vehicle (top speed, types of roads in can travel, ...). I created a quick `truck.lua` based on the standard `car.lua` and lowering the top speed.
+Follow instructions on [OSRM](https://github.com/Project-OSRM/osrm-backend), these are basically 3 lines of code:
 
 ```sh
 docker run -t -v $(pwd):/data osrm/osrm-backend osrm-extract -p /data/truck.lua /data/gambia_2018-02-20.osm
@@ -76,7 +80,11 @@ docker run -p 9966:9966 osrm/osrm-frontend
 
 ## 3. Sample routing called
 
-* To get the time and distance from a origin-destination point:
+### Simple OD pair
+
+To get the time and distance from a origin-destination point:
+
+For example, the travel time, and distance from origin `[14.721761,-17.418823]` to the destination `[13.480448,-13.958130]`:
 
 ```python
 import requests  #http framework to make Mapbox API requests for routes
@@ -99,55 +107,12 @@ print, json.loads(response.text)['routes'][0]['duration']," seconds"
 # 0281.4, ' seconds'
 ```
 
-* Given an array of origins, and an array of destinations, get ALL distances and times:
+### Matrix of OsDs
 
-```python
-TODO
-import csv
-import requests
-import json
-import numpy as np
+Most likely you will have a set of origins and a set of destinations, and you want to calculate the travel times from each origin to each destination. OSRM offers a `matrix` function for this case.
 
-#calculate all pairs of distance
-#print [time,distance] in [hours,km] to get for one point to the other
-url="http://localhost:5000/route/v1/driving/"
-pairs={}
-print("Prefetching all pairs of time distances: %i items"%((len(clusters)*(len(clusters)))/2))
-batch=100
+For this example we will use [OSM Taginfo](https://taginfo.openstreetmap.org/) to find a set of origins and a set of destinations, and then download them from [Overpass turbo](https://overpass-turbo.eu/).
 
-def dispatch(origin_loc,origin_id,destinations_locs,pair_ids):
-    print("Requesting %3i pairs. Number of pairs done %i"%(len(pair_ids)+1,len(pairs)),end="\r")
-    url=url+origin_loc+destinations_locs[:-1]
-    response = requests.get(url) #do the request
-    response_j=json.loads(response.text)
-    times=response_j['durations'][0]
-    pair_ids=[origin_id+'-'+origin_id]+pair_ids
-    #print(len(times),len(pair_ids))
-    for x in np.arange(len(times))[1:]:
-        pairs[pair_ids[x]]=float(times[x])
+Concretely we will use [all Gambian villages](https://overpass-turbo.eu/s/wJo) as sources, and all [Gambian health facilities](https://data.humdata.org/dataset/gambia-healthsites) as destinations.
 
- for index_i,c_i in clusters.iterrows():   
-    origin_id=c_i['IDCLUSTER']
-    origin_loc=str(c_i['flng'])+','+str(c_i['flat'])+";"
-    destinations_locs=""
-    pair_ids=[]
-    for index_j,c_j in clusters.iterrows():
-        destination_id=c_j['IDCLUSTER']
-        pair=origin_id+'-'+destination_id
-        pair_reverse=destination_id+'-'+origin_id
-        if any(x in list(pairs.keys()) for x in [pair,pair_reverse]):
-            print("",end="")
-        else:
-            destinations_locs+=str(c_j['flng'])+','+str(c_j['flat'])+";"
-            pair_ids.append(pair)
-        if len(pair_ids)==batch-1:
-            #print("batch full")
-            dispatch(origin_loc,origin_id,destinations_locs,pair_ids)
-            destinations_locs=""
-            pair_ids=[]
-    #print("end of destinations",len(pair_ids))
-    if len(pair_ids)>0:
-        dispatch(origin_loc,origin_id,destinations_locs,pair_ids)
- print("\nDone")
-
-```
+See [Matrix ETA.ipynb](./Matrix ETA.ipynb).
