@@ -1,4 +1,4 @@
-# Gambia Imagery data
+# Gambia
 
 This document explains how to find imagery data for the Gambia challenge.
 
