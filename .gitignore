@@ -5,3 +5,6 @@ osmupdate
 *.osrm*
 *.o5m
 .DS_Store
+*.zip
+*.pickle
+*/data/satellogic
