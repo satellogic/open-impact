@@ -53,14 +53,12 @@ For example, in Gambia [1/3 of the GPD](https://en.wikipedia.org/wiki/Economy_of
 
 We could, for example, calculate first the location of planted areas, and then the travel times between these and the closest villages, or port (for exports). This will give us information of the operating cost and effort to produce the harvest, and could help us calculate the impact when a particular road is upgraded, or degraded.
 
-
-
 Data:
 - Landsat/Copernicus Level-1 at different times.
 - Satellogic Hyperspectral where available.
 - Historical Hyperion where available.
 
-[Notebook](#)
+[See Notebook for more details](gambia/Gambia.ipynb)
 
 
 ## Ocean color
