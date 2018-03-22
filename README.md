@@ -48,6 +48,8 @@ Data:
 
 ## Ocean color
 
-TBD
+This project explores using Satellogic hyperspectral camera for data over the Oceans. Hyperspectral measurements over water bodies can be used to infer important information such as phytoplankton biomass or concentrations of other living and non-living material that modify the characteristics of the incoming radiation.
 
-[Notebook](#)
+In this example we show how to download, visualize and cluster hyper data over the coasts of Qatar, Luisiana (USA) and the Southern tip of South Korea.
+
+[Notebook](Ocean color/Ocean color.ipynb)
