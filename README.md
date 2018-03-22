@@ -1,3 +1,4 @@
+![](Gambia.png)
 # Open Impact
 
 This repository compiles several social and/or environmental impact projects.
@@ -6,6 +7,8 @@ Where available, we leverage open software (like python) and open data (like Lan
 
 
 Each idea has an explanation at the top, how to read the data, and a few pointers of the tools you might need. This is not an exclusive list, if there's a similar idea wit the same data, feel free to work on it. These are just pointers to ignite your curiosity and get you up and running as quickly as possible.
+
+![](hyper.png)
 
 
 ## City fingerprint.
@@ -52,4 +55,4 @@ This project explores using Satellogic hyperspectral camera for data over the Oc
 
 In this example we show how to download, visualize and cluster hyper data over the coasts of Qatar, Luisiana (USA) and the Southern tip of South Korea.
 
-[Notebook](Ocean color/Ocean color.ipynb)
+[Notebook]("Ocean color/Ocean color.ipynb")
