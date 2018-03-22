@@ -1,4 +1,4 @@
-![](Gambia.png)
+![](gambia.png)
 # Open Impact
 
 This repository compiles several social and/or environmental impact projects.
