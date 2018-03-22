@@ -27,21 +27,6 @@ Concept:
 [Notebook](#)
 
 
-## Forest fire recovery
-
-Can we predict recovery times from a forest fire? What makes for a fastest recovery?
-
-Data:
-- Landsat/Copernicus Level-1 at different times.
-- Satellogic Hyperspectral where available.
-- Historical Hyperion where available.
-
-Concept:
-
-Take data from right before a fire to after it's fully recovered. Use the hyperspectral and temporal information to adjust to a recovery interpolation. Once done, it should be possible to map quick recoveries and what makes them so.
-
-[Notebook](#)
-
 
 ## Access to market / Gambia
 
