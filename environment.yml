@@ -5,6 +5,7 @@ channels:
 dependencies:
 - affine=2.2.0=py_0
 - appnope=0.1.0=py36_0
+- asn1crypto=0.24.0=py36_0
 - attrs=17.4.0=py_0
 - backports=1.0=py36_1
 - backports.functools_lru_cache=1.5=py36_0
@@ -17,10 +18,13 @@ dependencies:
 - ca-certificates=2018.1.18=0
 - cairo=1.14.10=0
 - certifi=2018.1.18=py36_0
+- cffi=1.11.5=py36_0
+- chardet=3.0.4=py36_0
 - clangdev=6.0.0=default_0
 - click=6.7=py_1
 - click-plugins=1.0.3=py36_0
 - cligj=0.4.0=py36_0
+- cryptography=2.1.4=py36_0
 - curl=7.59.0=0
 - cycler=0.10.0=py36_0
 - dask-core=0.17.2=py_0
@@ -42,6 +46,7 @@ dependencies:
 - hdf5=1.10.1=2
 - html5lib=1.0.1=py_0
 - icu=58.2=0
+- idna=2.6=py36_1
 - imageio=2.3.0=py36_0
 - ipykernel=4.8.2=py36_0
 - ipython=6.2.1=py36_1
@@ -103,10 +108,13 @@ dependencies:
 - proj4=4.9.3=5
 - prompt_toolkit=1.0.15=py36_0
 - ptyprocess=0.5.2=py36_0
+- pycparser=2.18=py36_0
 - pygments=2.2.0=py36_0
+- pyopenssl=17.5.0=py36_0
 - pyparsing=2.2.0=py36_0
 - pyqt=5.6.0=py36_4
 - pysal=1.14.3=py36_0
+- pysocks=1.6.8=py36_1
 - python=3.6.4=0
 - python-dateutil=2.7.0=py_0
 - pytz=2018.3=py_0
@@ -116,6 +124,7 @@ dependencies:
 - qtconsole=4.3.1=py36_0
 - rasterio=0.36.0=py36_3
 - readline=7.0=0
+- requests=2.18.4=py36_1
 - s3transfer=0.1.13=py36_0
 - scikit-image=0.13.1=py36_0
 - send2trash=1.5.0=py_0
@@ -133,6 +142,7 @@ dependencies:
 - toolz=0.9.0=py_0
 - tornado=5.0.1=py36_1
 - traitlets=4.3.2=py36_0
+- urllib3=1.22=py36_0
 - wcwidth=0.1.7=py36_0
 - webencodings=0.5=py36_0
 - wheel=0.30.0=py36_2
