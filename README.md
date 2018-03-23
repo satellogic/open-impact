@@ -8,7 +8,28 @@ Where available, we leverage open software (like python) and open data (like Lan
 
 Each idea has an explanation at the top, how to read the data, and a few pointers of the tools you might need. This is not an exclusive list, if there's a similar idea wit the same data, feel free to work on it. These are just pointers to ignite your curiosity and get you up and running as quickly as possible.
 
-![](hyper.png)
+## Install
+
+We use conda so we can isolate, and replicate, the working environment across computers. We also use jupyter notebooks running python to explore the data.
+
+To run this notebooks:
+* [Install anaconda](https://conda.io/docs/installation.html)
+* clone this repository
+* Create an environment using the `environment.yml` on this root folder.
+    ```sh
+    conda env create -f environment.yml
+    ```
+* Activate the new "satellogic" conda environment.
+    ```sh
+    source activate satellogic
+    ```
+
+Troubleshoot:
+
+If your jupyter runs a kernel that is not from the conda active environment you might need to run this to add it:
+    jupyter python -m ipykernel install --user
+
+
 
 
 ## City fingerprint.
@@ -48,6 +69,7 @@ Data:
 
 [See Notebook for more details](gambia/Gambia.ipynb)
 
+![](hyper.png)
 
 ## Ocean color
 
