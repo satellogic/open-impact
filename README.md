@@ -27,8 +27,9 @@ To run this notebooks:
 Troubleshoot:
 
 If your jupyter runs a kernel that is not from the conda active environment you might need to run this to add it:
-  ```sh
-  jupyter python -m ipykernel install --user    ```
+```sh
+  jupyter python -m ipykernel install --user  
+```
 
 
 
