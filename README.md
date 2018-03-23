@@ -27,8 +27,8 @@ To run this notebooks:
 Troubleshoot:
 
 If your jupyter runs a kernel that is not from the conda active environment you might need to run this to add it:
-    jupyter python -m ipykernel install --user
-
+  ```sh
+  jupyter python -m ipykernel install --user    ```
 
 
 
@@ -77,4 +77,4 @@ This project explores using Satellogic hyperspectral camera for data over the Oc
 
 In this example we show how to download, visualize and cluster hyper data over the coasts of Qatar, Luisiana (USA) and the Southern tip of South Korea.
 
-[Notebook]("Ocean color/Ocean color.ipynb")
+[Notebook](Ocean color/Ocean\ color.ipynb)
