@@ -167,5 +167,3 @@ dependencies:
   - jupyter-core==4.4.0
   - mapboxgl==0.5.1
   - prompt-toolkit==1.0.15
-prefix: /Users/brunosan/anaconda3/envs/satellogic
-
