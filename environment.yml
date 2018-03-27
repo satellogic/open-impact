@@ -1,4 +1,4 @@
-name: satellogic
+name: satellogic2
 channels:
 - conda-forge
 - defaults

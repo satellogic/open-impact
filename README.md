@@ -23,6 +23,7 @@ To run this notebooks:
     ```sh
     source activate satellogic
     jupyter python -m ipykernel install --user
+    pip install mapboxgl
     jupyter notebook
     ```
 
