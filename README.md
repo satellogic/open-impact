@@ -10,7 +10,7 @@ Each idea has an explanation at the top, how to read the data, and a few pointer
 
 ## Install
 
-We use conda so we can isolate, and replicate, the working environment across computers. We also use jupyter notebooks running python to explore the data.
+We use conda so we can isolate, and replicate, the working environment across computers. We also use jupyter notebooks running python to explore the data. The following instructions are tested both on MacOS 10.13.3 and Ubuntu 16.04 (Xenial).
 
 To run this notebooks:
 * [Install anaconda](https://conda.io/docs/installation.html)
@@ -22,7 +22,8 @@ To run this notebooks:
 * Activate the new "satellogic" conda environment.
     ```sh
     source activate satellogic
-    jupyter python -m ipykernel install --user
+    python -m ipykernel install --user
+    pip install mapboxgl
     jupyter notebook
     ```
 
