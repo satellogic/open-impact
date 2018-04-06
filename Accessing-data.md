@@ -151,8 +151,3 @@ You can use, e.g., [`landsat-util`](https://pythonhosted.org/landsat-util/) via 
 
 Download data from https://earthexplorer.usgs.gov/
 
-Search from: 2017-11-01 to 2018-02-22
-
-Coordinates: Select ROI with the following instructions
-
-![](gambia_image_coordinates2.png)
