@@ -72,6 +72,76 @@ raster_827 = response['results'][0]['rasters'][1]
 url = raster_827['url']
 filename = raster_827['file_name']
 header = { 'authorization' : telluric_token}
+```
+
+This will start the request to create a zip file with all rasters. It saves substantial bandwidth.
+
+
+```python
+#get download id for the whole raster
+url = 'https://telluric.satellogic.com/v2/scenes/download/'
+
+scene_id = 'newsat3_macro_cube_257e8052c6d94b72ada0b788173791fa_0_4_3'
+header = { 'authorization' : telluric_token}
+data = {'scene_id':scene_id,
+        'async': 1}  # Important! This will prepare the download in the background for us
+print("Requesting download...")
+r = requests.get(url, params=data, headers=header)
+if r.status_code != 200:
+    raise ValueError("Telluric response error: %s" %r.text) 
+response = r.json()
+response  
+```
+
+We then need to wait, 
+
+```python
+import time
+#after a while (10 minutes), the download is ready
+response=requests.get(r.json()['status_path'], headers=header).json()
+print(response['status'],end=': ')
+while response['status']=='Creating':
+    time.sleep(5)
+    response=requests.get(r.json()['status_path'], headers=header).json()
+    print("%2.1f%%, "%response['progress'],end="")
+print('. Ready to download.')
+```
+
+Once done, download and unzip
+
+```python
+import os
+from zipfile import ZipFile
+
+#download raster to a file (<10 minutes with a good connection)
+url = response['download_url']
+folder="./data/satellogic/macro/"+scene_id+"/"
+if not os.path.exists(folder):
+    os.makedirs(folder)
+filename = folder+response['filename']
+header = { 'authorization' : telluric_token}
+
+# http://docs.python-requests.org/en/master/user/quickstart/#raw-response-content
+r = requests.get(url, headers=header, stream=True)
+if r.status_code != 200:
+    raise ValueError("Telluric response error: %s" %r.text) 
+print(filename)
+with open(filename, 'wb') as fd:
+    i=0
+    total=int(r.headers.get('content-length'))
+    for chunk in r.iter_content(chunk_size=1024):
+        fd.write(chunk)
+        i+=1
+        print("\rDownloading %3.2f%%"%(i*1024./total*100),end='')
+print("done")
+
+#unzip the contents
+
+with ZipFile(filename, 'r') as fp:
+    fp.extractall(folder)
+```
+
+
 
 # http://docs.python-requests.org/en/master/user/quickstart/#raw-response-content
 r = requests.get(url, headers=header, stream=True)
