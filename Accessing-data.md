@@ -29,7 +29,7 @@ payload = {'username':'stanfordhackathon','password':'******'}
 print("Getting token...")
 r = requests.post(url, data=payload)
 if r.status_code != 200:
-    raise ValueError("Telluric response error: %s" %r.text) 
+    raise ValueError("Telluric response error: %s" %r.text)
 telluric_token="JWT "+r.json()['token']
 print(telluric_token[0:10]+"*masked*")
 ```
@@ -57,7 +57,7 @@ header = { 'authorization' : telluric_token}
 print("Requesting scene...")
 r = requests.get(url, params=payload, headers=header)
 if r.status_code != 200:
-    raise ValueError("Telluric response error: %s" %r.text) 
+    raise ValueError("Telluric response error: %s" %r.text)
 response=r.json()
 scene_id=response['results'][0]['scene_id']
 print(scene_id)
@@ -88,12 +88,12 @@ data = {'scene_id':scene_id,
 print("Requesting download...")
 r = requests.get(url, params=data, headers=header)
 if r.status_code != 200:
-    raise ValueError("Telluric response error: %s" %r.text) 
+    raise ValueError("Telluric response error: %s" %r.text)
 response = r.json()
 response  
 ```
 
-We then need to wait, 
+We then need to wait,
 
 ```python
 import time
@@ -124,7 +124,7 @@ header = { 'authorization' : telluric_token}
 # http://docs.python-requests.org/en/master/user/quickstart/#raw-response-content
 r = requests.get(url, headers=header, stream=True)
 if r.status_code != 200:
-    raise ValueError("Telluric response error: %s" %r.text) 
+    raise ValueError("Telluric response error: %s" %r.text)
 print(filename)
 with open(filename, 'wb') as fd:
     i=0
@@ -142,16 +142,6 @@ with ZipFile(filename, 'r') as fp:
 ```
 
 
-
-# http://docs.python-requests.org/en/master/user/quickstart/#raw-response-content
-r = requests.get(url, headers=header, stream=True)
-if r.status_code != 200:
-    raise ValueError("Telluric response error: %s" %r.text) 
-
-with open(filename, 'wb') as fd:
-    for chunk in r.iter_content(chunk_size=128):
-        fd.write(chunk)
-```
 
 
 
