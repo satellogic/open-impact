@@ -147,6 +147,8 @@ with ZipFile(filename, 'r') as fp:
 
 ## Landsat Data
 
+You can use, e.g., [`landsat-util`](https://pythonhosted.org/landsat-util/) via API, or via web from e.g. USGS.
+
 Download data from https://earthexplorer.usgs.gov/
 
 Search from: 2017-11-01 to 2018-02-22
@@ -154,5 +156,3 @@ Search from: 2017-11-01 to 2018-02-22
 Coordinates: Select ROI with the following instructions
 
 ![](gambia_image_coordinates2.png)
-
-## Hyperion data
