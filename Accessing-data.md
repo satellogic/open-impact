@@ -13,7 +13,19 @@ There are 2 ways to get Satellogic data:
 
 ### Via web interface
 
-You should have received a user/password (if not, email brunosan@satellogic.com). This is an example [of the search in the Catalog for Gambia](https://telluric.satellogic.com/catalog/shared/N4IgRghgzgpgthADiAXCAFgF04qKD0+A1gPYBOJAdhAHQDmMJdNArpQJYC06M7AJjAA2YGGWYD8mdoJhR8FCHyh18ADwC8wVQF8AZAE9N+vQC9NJ7SAA0IAMYxKmUagDanAIwBOAOyeADN4ArDSeAEzeAMx+EQAsAGyeEVbugYF+Mak0oRERoWmBEQAccQC6NrYsZGQOmADK9pQwAJIAIqggjQDuUBCYEQD6CLYU-RUi-XneMIV+gaG2cXyeMWDeoYoQfquFhe6Rvu4AZhD9fv0x-RHWdoLstkQwfPUOzW1oXT19gxDDJKMs40m01m80Wy1W6z4m22u32niOJzOFyuNnQJAAbqJHs9Gq1UJQWIJBDYEOxKAAFCCNQQAYUq1UcABUIGB2tUoITMFBrodpE4yAAlEgsJzclAuFwgQ4kEg4MhkzAgMqSjmIRC3ZzKkCICh8Fi2TDUOAwJVWSVSY1QTAQODILVQBowfr8U0qx2wTDOviukCfIS3Jz9I0mkplEAARxYon0qFA0tlOoV7WAAB0QJh9IgYGmUGnySRBPo6FQ01Y07YZWQ+GTerIcxK3O5CjQInEZnEm7t0pEAskYjQYn44oPPIF3LMYqFPMVlR5m63253xzEe95kqEB1FQnFQn5EnFW4FZ+4N-5Zv5QqFB35CstQuvN35t7v94fj6e-Oen1fP7fJ32ByHEcxwnKcZzNOcWzbIcl27KI13cftB2HPcQMCSdp1KUNLBsP0iXYQNg3aa4HReL1iNw90YE9F00BIlg1Q1MgKKlCg4H6C0TTomxMD+TiWNuOACNQcdPxsEhDkOD1UD8ElqI2a1Y20GwdRIPUDSItAxhNZSQBMGU4FQOIaG8GJChyCzLIsmw+DICBOlEWprUwFgxRAEgs0ab0eI8nFXnaD5egGIYRm0iZAimGY5gWJYVjWDYtm8HY9giA5jlOc5Lmuch2DoGtBD8vF3hgbogu+X5-kBCLgWisE4shaEkthVL4XSpEstw8gpEoOgADF2CEJRXFACgRS4lwwykTAZCc+UepYw5CUESlMHQFiHhjbj3KrZw6OUkbhScVxJoImbMDmugFqWla1q2jaWPIARmL2qwDrG46eNOmBZrJS6tsWokbvWmBNpAbKduesHtBKbQgA).
+You should have received a user/password (if not, email brunosan@satellogic.com).
+
+Once loged-in, you can choose to explore the multispectral dataset (RGBA 1 meter resolution), or the hyperspectral dataset (30 bands, 30 meters resolution).
+
+![](dataset.png)
+
+The Explorer allows to give an overview of the locations available within the account dataset. When you zoom in, you can choose a product type to visualize (RGB, NDVI, ...)
+
+![](products.png)
+
+Clicking on the list tab, you can navigate directly to any scene, download the corresponding tiff raster files directly, and see the spectral profile for each pixel.
+
+![](bands-list.png)
 
 
 ### Via API
@@ -150,4 +162,3 @@ with ZipFile(filename, 'r') as fp:
 You can use, e.g., [`landsat-util`](https://pythonhosted.org/landsat-util/) via API, or via web from e.g. USGS.
 
 Download data from https://earthexplorer.usgs.gov/
-
