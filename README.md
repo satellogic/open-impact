@@ -6,7 +6,7 @@ This repository compiles several ideas for social and/or environmental impact pr
 To explore the Satellogic Open Impact dataset, log in on [http://telluric.satellogic.com/](http://telluric.satellogic.com/) as `stanfordhackathon/hack2018
 `
 
-Where available, we leverage open software (like python) and open data (like Landsat), as well as Satellogic open data (under the reproducible academic research program, see [license.md](license.md))
+Where available, we leverage open software (like python) and open data (like Landsat), as well as Satellogic open data (under the reproducible academic research program, see [license.md](LICENSE.md))
 
 
 Each idea has an explanation at the top, how to read the data, and a few pointers of the tools you might need. This is not an exclusive list, if there's a similar idea wit the same data, feel free to work on it and contribute to the code or ask for help if you have questions. These are just pointers to ignite your curiosity and get you up and running with the basics, like reading a file, as quickly as possible.
