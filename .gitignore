@@ -8,3 +8,4 @@ osmupdate
 *.zip
 *.pickle
 data/
+__pycache__
