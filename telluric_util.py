@@ -1,3 +1,14 @@
+"""
+Set of higher level utility functions for common operations
+To use inside the examples of this repository use:
+
+import sys
+sys.path.insert(0, '../')
+import telluric_util
+telluric_util.get_token
+"""
+
+
 import requests
 
 def get_token( user, passwd ):
@@ -31,7 +42,12 @@ def set2id(set_id,token):
   scene_id=response['results'][0]['scene_id']
   return scene_id
 
-def download_scene(sceneset_id,token,data_dir):
+def download_scene_iter(sceneset_id,token,data_dir):
+      """
+      Given a set_id, and a token, download all the metadata and rasters
+      files, file by file.
+      This is similar to `download_scene` but it checks each file individually
+      """
     import time
     import os
 
