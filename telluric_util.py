@@ -43,11 +43,11 @@ def set2id(set_id,token):
   return scene_id
 
 def download_scene_iter(sceneset_id,token,data_dir):
-      """
+    """
       Given a set_id, and a token, download all the metadata and rasters
       files, file by file.
-      This is similar to `download_scene` but it checks each file individually
-      """
+     This is similar to `download_scene` but it checks each file individually
+    """
     import time
     import os
 
